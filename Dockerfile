@@ -24,11 +24,11 @@ RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 RUN pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu \
     torch==2.3.1 torchvision==0.18.1
 
-# Copy constraints to pin heavy deps to compatible versions
-COPY constraints.txt ./constraints.txt
+# Install base Python dependencies first
+RUN pip install --no-cache-dir -r requirements.txt --no-deps
 
-# Install Python dependencies with constraints (includes editable local package)
-RUN pip install --no-cache-dir -r requirements.txt -c constraints.txt
+# Then install the editable local package (resolves its own deps)
+RUN pip install --no-cache-dir -e ./revallusion_ai
 
 # Copy the rest of the application code
 COPY . .

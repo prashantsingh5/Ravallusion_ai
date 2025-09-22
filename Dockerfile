@@ -9,11 +9,16 @@ RUN apt-get update && apt-get install -y \
     ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements and install Python dependencies
+# Copy requirements first
 COPY requirements.txt .
+
+# Copy local package source before installing requirements to support "-e ./revallusion_ai"
+COPY revallusion_ai ./revallusion_ai
+
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application code
+# Copy the rest of the application code
 COPY . .
 
 # Expose port

@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: ravallusion-evaluator
+    env: docker
+    plan: starter
+    autoDeploy: true
+    healthCheckPath: /health
+    envVars:
+      - key: MONGO_DB_URI
+        sync: false
+      - key: CLOUDFRONT_BASE_URL
+        sync: false
+      - key: EXTERNAL_API_TOKEN
+        sync: false
+      - key: FRONTEND_URL
+        value: https://your-frontend-domain.com
+    # Optional: increase timeouts for heavy requests
+    # render.yaml doesn't expose per-request timeout; configure in dashboard if needed

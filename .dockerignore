@@ -1,0 +1,48 @@
+# Exclude VCS and editor files
+.git
+.gitignore
+.vscode/
+.idea/
+
+# Python caches and venvs
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+ENV/
+moduleenv/
+
+# Local env and secrets
+.env
+*.env
+
+# Large or generated artifacts
+build/
+dist/
+.eggs/
+*.egg-info/
+htmlcov/
+.pytest_cache/
+
+# App temp/output folders
+final_cut_video_frames/
+other_video_frames/
+final_cut_video/
+other_video/
+asset_found/
+temp_cropped_final/
+temp_cropped_other/
+test_aud/
+checkpoints/
+*.pth
+
+# Frontend outputs (if present)
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# OS junk
+.DS_Store
+Thumbs.db

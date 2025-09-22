@@ -1,0 +1,13 @@
+# Pin problematic ML/IO deps to versions compatible with Python 3.10 and CPU wheels
+ultralytics==8.3.70
+opencv-python==4.10.0.84
+numpy==1.26.4
+pillow==10.4.0
+tqdm==4.66.5
+librosa==0.10.2.post1
+soundfile==0.12.1
+scipy==1.11.4
+sentence-transformers==3.0.1
+transformers==4.44.2
+onnxruntime==1.18.1
+# FastAPI stack already pinned in requirements.txt

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ravallusion-ai"
+version = "0.1.0"
+requires-python = ">=3.8"
+
+dependencies = [
+  "numpy",
+  "fastapi",
+  "opencv-python",
+  "Pillow",
+  "tqdm",
+  "ultralytics",
+  "torch",
+  "torchvision",
+  "streamlit",
+  "moviepy",
+  "pydub",
+  "sentence-transformers",
+  "scikit-learn",
+  "python-dotenv",
+  "pydantic",
+  "deepgram-sdk",
+  "google-genai",
+  "librosa",
+  "scipy"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+ravallusion-eval = "ravallusion_ai.run:main"

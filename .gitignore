@@ -1,0 +1,83 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+.env/
+moduleenv/
+
+# FastAPI/uvicorn logs
+*.log
+logs/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.dylib
+*.dll
+
+# Test/coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Build artifacts
+build/
+dist/
+.eggs/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node / Vite frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/
+
+# Editor
+.vscode/
+.idea/
+
+# Temporary or debug folders created by evaluator
+final_cut_video_frames/
+other_video_frames/
+final_cut_video/
+other_video/
+asset_found/
+temp_cropped_final/
+temp_cropped_other/
+test_aud/
+
+# Images/videos caches
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wmv
+*.png
+*.jpg
+*.jpeg
+
+# Ignore large test data folders
+extra
+
+# PyTorch model checkpoints
+*.pth
+*.pt
+
+# python file 
+evaluation_test.py
